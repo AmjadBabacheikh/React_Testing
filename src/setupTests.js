@@ -1,5 +1,5 @@
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+//setupTests is executing in first by jest before other files
+//shallow is a function that return an instance of the component without his children
+Enzyme.configure({ adapter: new Adapter() });
